@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥊 Gran Quiniela Familiar | ¿Niño o Niña?</title>
+    <!-- Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Bangers para estilo cómic/boxeo e Inter para lectura clara -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            overflow-x: hidden;
+        }
+        .font-boxing {
+            font-family: 'Bangers', cursive;
+            letter-spacing: 0.05em;
+        }
+        /* Fondo dividido estilo cartel de boxeo */
+        .boxing-bg {
+            background: linear-gradient(115deg, #1d4ed8 0%, #1e3a8a 49.5%, #fbbf24 49.5%, #fbbf24 50.5%, #be185d 50.5%, #db2777 100%);
+        }
+        @media (max-width: 768px) {
+            .boxing-bg {
+                background: linear-gradient(180deg, #1d4ed8 0%, #1e3a8a 49.5%, #fbbf24 49.5%, #fbbf24 50.5%, #be185d 50.5%, #db2777 100%);
+            }
+        }
+        .text-stroke {
+            -webkit-text-stroke: 2px #0f172a;
+            text-shadow: 4px 4px 0px #0f172a;
+        }
+        .text-stroke-sm {
+            -webkit-text-stroke: 1px #0f172a;
+            text-shadow: 2px 2px 0px #0f172a;
+        }
+        .card-shadow {
+            box-shadow: 8px 8px 0px #0f172a;
+        }
+        .btn-punch {
+            transition: all 0.15s ease;
+            box-shadow: 0 6px 0 #0f172a;
+        }
+        .btn-punch:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 #0f172a;
+        }
+        @keyframes pulse-scale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-vs {
+            animation: pulse-scale 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-slate-100 antialiased selection:bg-amber-400 selection:text-slate-900">
+
+    <!-- CONFIGURACIÓN RÁPIDA: Edita el enlace de tu Google Form aquí abajo en el script al final del archivo -->
+
+    <!-- BANNER SUPERIOR -->
+    <div class="bg-amber-400 text-slate-950 text-center py-2 px-4 font-bold text-xs sm:text-sm tracking-wider uppercase border-b-4 border-slate-950">
+        🌎 ¡La familia está regada por el mundo, pero la emoción nos une! 🌎
+    </div>
+
+    <!-- HERO SECTION: CARTEL DE PELEA -->
+    <header class="boxing-bg relative border-b-8 border-slate-950 py-10 px-4 sm:py-16">
+        <div class="max-w-5xl mx-auto text-center">
+            <!-- Etiqueta evento -->
+            <div class="inline-block bg-slate-950 text-amber-400 px-5 py-1.5 rounded-full font-extrabold text-xs sm:text-sm uppercase tracking-widest mb-4 border-2 border-amber-400 shadow-lg">
+                🏆 Evento Estelar • Revelación en Vivo 🏆
+            </div>
+
+            <!-- Título Principal -->
+            <h1 class="font-boxing text-5xl sm:text-7xl md:text-8xl text-white text-stroke uppercase leading-none mb-2">
+                ¿QUIÉN GANARÁ?
+            </h1>
+            <p class="font-boxing text-3xl sm:text-5xl text-amber-300 text-stroke-sm uppercase mb-8">
+                ¡ABRIMOS LAS APUESTAS!
+            </p>
+
+            <!-- Contendientes: Team Niño vs Team Niña -->
+            <div class="grid grid-cols-1 md:grid-cols-11 gap-6 items-center max-w-4xl mx-auto my-8">
+                
+                <!-- Esquina Azul: Team Niño -->
+                <div class="md:col-span-5 bg-blue-600/95 backdrop-blur-sm border-4 border-slate-950 rounded-3xl p-6 card-shadow transform hover:-rotate-1 transition">
+                    <div class="w-24 h-24 mx-auto bg-blue-900 rounded-full border-4 border-amber-400 flex items-center justify-center text-5xl mb-4 shadow-inner">
+                        🥊💙
+                    </div>
+                    <span class="bg-slate-950 text-blue-300 text-xs font-black px-3 py-1 rounded-full uppercase">Esquina Azul</span>
+                    <h2 class="font-boxing text-4xl sm:text-5xl text-white text-stroke-sm mt-2">¡TEAM NIÑO!</h2>
+                    <p class="text-blue-100 text-sm mt-2 font-medium">Fuerza, travesuras y pura energía. ¿Crees que viene un campeón?</p>
+                </div>
+
+                <!-- Badge VS -->
+                <div class="md:col-span-1 flex justify-center z-10">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-amber-400 border-4 border-slate-950 rounded-full flex items-center justify-center font-boxing text-3xl sm:text-4xl text-slate-950 shadow-xl animate-vs">
+                        VS
+                    </div>
+                </div>
+
+                <!-- Esquina Rosa: Team Niña -->
+                <div class="md:col-span-5 bg-pink-600/95 backdrop-blur-sm border-4 border-slate-950 rounded-3xl p-6 card-shadow transform hover:rotate-1 transition">
+                    <div class="w-24 h-24 mx-auto bg-pink-900 rounded-full border-4 border-amber-400 flex items-center justify-center text-5xl mb-4 shadow-inner">
+                        🥊💖
+                    </div>
+                    <span class="bg-slate-950 text-pink-300 text-xs font-black px-3 py-1 rounded-full uppercase">Esquina Rosa</span>
+                    <h2 class="font-boxing text-4xl sm:text-5xl text-white text-stroke-sm mt-2">¡TEAM NIÑA!</h2>
+                    <p class="text-pink-100 text-sm mt-2 font-medium">Chispa, dulzura y carácter. ¿Crees que llega una princesa?</p>
+                </div>
+
+            </div>
+
+            <!-- MARCADOR EN VIVO DEL POZO (Conectado a Google Sheets) -->
+            <div class="max-w-3xl mx-auto my-8 bg-slate-950/90 backdrop-blur-md border-4 border-amber-400 rounded-3xl p-5 sm:p-6 card-shadow">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-4 border-b border-slate-800 pb-3">
+                    <span class="inline-flex items-center gap-2 text-xs sm:text-sm font-black uppercase tracking-wider text-amber-400">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        Pozo Acumulado en Vivo
+                    </span>
+                    <span id="estado-pozo" class="text-[11px] sm:text-xs text-slate-400 font-medium">Sincronizando datos...</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center">
+                    <div class="bg-blue-950/70 border-2 border-blue-500/60 rounded-2xl p-3">
+                        <span class="text-xs font-bold uppercase text-blue-300 block">💙 Team Niño</span>
+                        <span id="live-nino" class="font-boxing text-3xl sm:text-4xl text-white tracking-wide">$0.00</span>
+                    </div>
+
+                    <div class="bg-amber-400 text-slate-950 border-2 border-slate-950 rounded-2xl p-3.5 transform sm:scale-105 shadow-lg">
+                        <span class="text-xs font-black uppercase tracking-wider block">💰 Pozo Total</span>
+                        <span id="live-total" class="font-boxing text-4xl sm:text-5xl leading-none block mt-1">$0.00</span>
+                    </div>
+
+                    <div class="bg-pink-950/70 border-2 border-pink-500/60 rounded-2xl p-3">
+                        <span class="text-xs font-bold uppercase text-pink-300 block">💖 Team Niña</span>
+                        <span id="live-nina" class="font-boxing text-3xl sm:text-4xl text-white tracking-wide">$0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón Principal CTA al Google Form -->
+            <div class="mt-10">
+                <a id="btn-apostar-hero" href="https://forms.gle/CqB2DfFf8oY6hbN5A" target="_blank" rel="noopener noreferrer"
+                   class="btn-punch inline-flex items-center gap-3 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-lg sm:text-2xl px-8 py-4 sm:px-10 sm:py-5 rounded-2xl border-4 border-slate-950 uppercase tracking-wide">
+                    <i class="fas fa-ticket-alt"></i>
+                    ¡Registrar mi Apuesta Ahora!
+                </a>
+                <p class="text-xs sm:text-sm text-white font-semibold mt-3 drop-shadow">
+                    *Te llevará al formulario oficial para anotar tu pronóstico y subir tu comprobante.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE REGLAS Y CRONOGRAMA -->
+    <section class="max-w-5xl mx-auto px-4 py-12 sm:py-16">
+        <div class="text-center mb-10">
+            <h2 class="font-boxing text-4xl sm:text-5xl text-amber-400 tracking-wide uppercase">
+                📋 Reglas del Combate
+            </h2>
+            <p class="text-slate-400 mt-2 max-w-2xl mx-auto text-sm sm:text-base">
+                Participa desde cualquier rincón del planeta. ¡Apoyas la fiesta del bebé y además puedes multiplicar tu apuesta!
+            </p>
+        </div>
+
+        <!-- Tarjetas de Información Clave -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Regla 1 -->
+            <div class="bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-amber-400 transition">
+                <div class="w-12 h-12 bg-amber-400/20 text-amber-400 rounded-xl flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-hourglass-half"></i>
+                </div>
+                <h3 class="font-bold text-lg text-white mb-1">Cierre de Apuestas</h3>
+                <p class="text-slate-300 text-sm">
+                    El día anterior a la revelación a las <strong class="text-amber-400">11:59 PM</strong>. ¡Cero apuestas de último segundo!
+                </p>
+            </div>
+
+            <!-- Regla 2 -->
+            <div class="bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-blue-400 transition">
+                <div class="w-12 h-12 bg-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="font-bold text-lg text-white mb-1">Revelación en Vivo</h3>
+                <p class="text-slate-300 text-sm">
+                    Transmisión en directo para toda la familia sin importar en qué país te encuentres.
+                </p>
+            </div>
+
+            <!-- Regla 3 -->
+            <div class="bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-pink-400 transition">
+                <div class="w-12 h-12 bg-pink-500/20 text-pink-400 rounded-xl flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="font-bold text-lg text-white mb-1">Premiación</h3>
+                <p class="text-slate-300 text-sm">
+                    Se realiza al <strong class="text-pink-400">día siguiente</strong> de la revelación directamente a las cuentas de los ganadores.
+                </p>
+            </div>
+
+            <!-- Regla 4 -->
+            <div class="bg-slate-800 border-2 border-slate-700 rounded-2xl p-5 hover:border-emerald-400 transition">
+                <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mb-4">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3 class="font-bold text-lg text-white mb-1">Reparto del Pozo</h3>
+                <p class="text-slate-300 text-sm">
+                    <strong class="text-emerald-400">70%</strong> se reparte entre los ganadores y <strong class="text-emerald-400">30%</strong> va para la fiesta y el bebé.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR INTERACTIVO DE GANANCIAS -->
+    <section class="bg-slate-900/80 border-y-2 border-slate-800 py-12 px-4">
+        <div class="max-w-3xl mx-auto bg-slate-800 border-4 border-slate-950 rounded-3xl p-6 sm:p-8 card-shadow">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="text-3xl">🧮</span>
+                <div>
+                    <h2 class="font-boxing text-3xl text-amber-400 tracking-wide">Simulador de Premios</h2>
+                    <p class="text-xs sm:text-sm text-slate-400">Calculado con el pozo real actual (puedes editar los montos para simular escenarios)</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-blue-400 mb-1">Pozo Team Niño ($)</label>
+                    <input type="number" id="sim-nino" value="250" min="10" class="w-full bg-slate-900 border-2 border-blue-500/50 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-blue-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-pink-400 mb-1">Pozo Team Niña ($)</label>
+                    <input type="number" id="sim-nina" value="150" min="10" class="w-full bg-slate-900 border-2 border-pink-500/50 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-pink-400">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-amber-400 mb-1">Tu Apuesta ($ USD)</label>
+                    <input type="number" id="sim-tu-apuesta" value="20" min="1" class="w-full bg-slate-900 border-2 border-amber-400/50 rounded-xl px-3 py-2 text-white font-bold focus:outline-none focus:border-amber-400">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-900 p-4 rounded-2xl border border-slate-700">
+                <div class="p-3 rounded-xl bg-blue-950/50 border border-blue-800/50">
+                    <span class="text-xs text-blue-300 font-semibold block">Si apuestan y gana NIÑO:</span>
+                    <span id="res-nino" class="text-2xl font-black text-blue-400">$22.40 USD</span>
+                    <span class="text-[11px] text-slate-400 block mt-0.5">*Incluye garantía de retorno mínimo</span>
+                </div>
+                <div class="p-3 rounded-xl bg-pink-950/50 border border-pink-800/50">
+                    <span class="text-xs text-pink-300 font-semibold block">Si apuestan y gana NIÑA:</span>
+                    <span id="res-nina" class="text-2xl font-black text-pink-400">$37.33 USD</span>
+                    <span class="text-[11px] text-slate-400 block mt-0.5">*¡El bando con menos apuestas paga más!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PASOS PARA PARTICIPAR + DATOS DE PAGO -->
+    <section id="como-participar" class="max-w-4xl mx-auto px-4 py-12 sm:py-16">
+        <div class="text-center mb-10">
+            <h2 class="font-boxing text-4xl sm:text-5xl text-white tracking-wide uppercase">
+                🚀 ¿Cómo Participar en 4 Pasos?
+            </h2>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Paso 1 -->
+            <div class="flex items-start gap-4 bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center shrink-0 text-lg">1</div>
+                <div>
+                    <h3 class="font-bold text-white text-lg">Elige tu Bando y Monto</h3>
+                    <p class="text-slate-300 text-sm">Decide si vas con el <span class="text-blue-400 font-bold">Team Niño</span> o el <span class="text-pink-400 font-bold">Team Niña</span>. No hay límite máximo de apuesta (¡mientras más apuestes, mayor será tu tajada del pozo!).</p>
+                </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="flex items-start gap-4 bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center shrink-0 text-lg">2</div>
+                <div class="w-full">
+                    <h3 class="font-bold text-white text-lg">Realiza tu Pago</h3>
+                    <p class="text-slate-300 text-sm mb-3">Puedes transferir usando cualquiera de los métodos habilitados y guarda el capture:</p>
+                    
+                    <!-- Caja de métodos de pago editables -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700">
+                            <span class="font-bold text-purple-400 block mb-1"><i class="fas fa-university mr-1"></i> ZELLE / USA</span>
+                            <p class="text-slate-300 select-all">tucorreo@ejemplo.com</p>
+                            <p class="text-slate-500">Titular: Tu Nombre</p>
+                        </div>
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700">
+                            <span class="font-bold text-blue-400 block mb-1"><i class="fas fa-mobile-alt mr-1"></i> PAGO MÓVIL (VE)</span>
+                            <p class="text-slate-300 select-all">0412-0000000 • V-00.000.000</p>
+                            <p class="text-slate-500">Banco: Banesco / Mercantil</p>
+                        </div>
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700">
+                            <span class="font-bold text-amber-400 block mb-1"><i class="fas fa-globe mr-1"></i> BINANCE / PAYPAL</span>
+                            <p class="text-slate-300 select-all">ID / Correo aquí</p>
+                            <p class="text-slate-500">Consultar otras monedas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="flex items-start gap-4 bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center shrink-0 text-lg">3</div>
+                <div>
+                    <h3 class="font-bold text-white text-lg">Llena el Formulario Oficial</h3>
+                    <p class="text-slate-300 text-sm">Haz clic en el botón de abajo, ingresa tus datos, tu equipo ganador, el monto en USD y sube la captura de tu pago.</p>
+                </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="flex items-start gap-4 bg-slate-800/90 p-5 rounded-2xl border border-slate-700">
+                <div class="w-10 h-10 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center shrink-0 text-lg">4</div>
+                <div>
+                    <h3 class="font-bold text-white text-lg">¡Disfruta la Revelación en Vivo!</h3>
+                    <p class="text-slate-300 text-sm">Conéctate el día del evento para vivir la emoción. Si aciertas, al día siguiente recibirás tu premio.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN FINAL AL GOOGLE FORM + COMPARTIR -->
+        <div class="mt-10 text-center space-y-4">
+            <a id="btn-apostar-footer" href="https://forms.gle/CqB2DfFf8oY6hbN5A" target="_blank" rel="noopener noreferrer"
+               class="btn-punch w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-xl px-10 py-5 rounded-2xl border-4 border-slate-950 uppercase">
+                <i class="fas fa-check-circle"></i>
+                Ir al Formulario de Apuestas
+            </a>
+
+            <div>
+                <button onclick="copiarEnlace()" class="text-sm text-slate-400 hover:text-amber-400 underline inline-flex items-center gap-2 py-2 px-4">
+                    <i class="fas fa-share-alt"></i> Copiar enlace de esta invitación para el grupo familiar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOTIFICACIÓN FLOTANTE (TOAST) -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-amber-400 text-slate-950 font-bold px-5 py-3 rounded-xl border-2 border-slate-950 shadow-2xl transform translate-y-24 opacity-0 transition-all duration-300 z-50">
+        ¡Enlace copiado! Pégalo en el grupo de WhatsApp 📲
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-500 px-4">
+        <p>🤫 El sexo del bebé es un secreto de estado guardado bajo llave por el Organizador Oficial.</p>
+        <p class="mt-1">Cláusula de juego limpio: Ningún ganador recibirá menos de su apuesta inicial.</p>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT -->
+    <script>
+        // =========================================================================
+        // 1. CONFIGURACIÓN DE ENLACES OFICIALES
+        // =========================================================================
+        const GOOGLE_FORM_URL = "https://forms.gle/CqB2DfFf8oY6hbN5A";
+        // Convertimos el enlace pubhtml de tu pestaña "Resultado" a formato CSV directo
+        const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTvPwm2th7Zr_PHDtjMX8XJvGUtLYap2cwYwX609HePsR4NVT-iSNkRSeHYNHsA4Ln8_Bjd4UxN9IQR/pub?gid=1331110909&single=true&output=csv";
+
+        let simEditadoManualmente = false;
+
+        // Asignar el enlace a los botones e iniciar sincronización
+        document.addEventListener("DOMContentLoaded", () => {
+            const btnHero = document.getElementById("btn-apostar-hero");
+            const btnFooter = document.getElementById("btn-apostar-footer");
+            
+            btnHero.href = GOOGLE_FORM_URL;
+            btnFooter.href = GOOGLE_FORM_URL;
+
+            calcularSimulador();
+            actualizarPozoEnVivo();
+            // Refresca el pozo automáticamente cada 45 segundos
+            setInterval(actualizarPozoEnVivo, 45000);
+        });
+
+        // =========================================================================
+        // 2. LECTURA AUTOMÁTICA DESDE GOOGLE SHEETS (PESTAÑA "RESULTADO")
+        // =========================================================================
+        function parseCSV(text) {
+            return text.trim().split(/\r?\n/).map(line => {
+                const cols = [];
+                let cur = "", inQuotes = false;
+                for (let i = 0; i < line.length; i++) {
+                    const ch = line[i];
+                    if (ch === '"') {
+                        inQuotes = !inQuotes;
+                    } else if (ch === "," && !inQuotes) {
+                        cols.push(cur.trim());
+                        cur = "";
+                    } else {
+                        cur += ch;
+                    }
+                }
+                cols.push(cur.trim());
+                return cols;
+            });
+        }
+
+        function extraerNumero(val) {
+            if (!val) return NaN;
+            // Soporta tanto punto decimal como coma decimal si viene formateado
+            let limpio = val.replace(/[^0-9.,-]+/g, "");
+            if (limpio.includes(",") && !limpio.includes(".")) {
+                limpio = limpio.replace(",", ".");
+            } else if (limpio.includes(",") && limpio.includes(".")) {
+                limpio = limpio.replace(/,/g, "");
+            }
+            return parseFloat(limpio);
+        }
+
+        async function actualizarPozoEnVivo() {
+            const estadoEl = document.getElementById("estado-pozo");
+            try {
+                const res = await fetch(`${SHEET_CSV_URL}&t=${Date.now()}`);
+                if (!res.ok) throw new Error("Error al leer Google Sheets");
+                const csvText = await res.text();
+                const rows = parseCSV(csvText);
+
+                let pozoTotal = null;
+                let pozoNino = null;
+                let pozoNina = null;
+
+                // Búsqueda inteligente por etiqueta (funciona sin importar en qué fila los pusiste)
+                for (const row of rows) {
+                    const etiqueta = (row[0] || "").toLowerCase();
+                    const valor = extraerNumero(row[1]);
+                    if (!isNaN(valor)) {
+                        if (etiqueta.includes("total recaudado") || etiqueta.includes("pozo total")) {
+                            pozoTotal = valor;
+                        } else if (etiqueta.includes("niño") || etiqueta.includes("nino")) {
+                            pozoNino = valor;
+                        } else if (etiqueta.includes("niña") || etiqueta.includes("nina")) {
+                            pozoNina = valor;
+                        }
+                    }
+                }
+
+                // Respaldo por posición estándar si las etiquetas tienen otro texto
+                if (pozoTotal === null && rows[3]) pozoTotal = extraerNumero(rows[3][1]) || 0;
+                if (pozoNino === null && rows[4]) pozoNino = extraerNumero(rows[4][1]) || 0;
+                if (pozoNina === null && rows[5]) pozoNina = extraerNumero(rows[5][1]) || 0;
+
+                pozoNino = pozoNino || 0;
+                pozoNina = pozoNina || 0;
+                pozoTotal = pozoTotal !== null ? pozoTotal : (pozoNino + pozoNina);
+
+                // Actualizar marcador en vivo
+                document.getElementById("live-total").textContent = `$${pozoTotal.toFixed(2)}`;
+                document.getElementById("live-nino").textContent = `$${pozoNino.toFixed(2)}`;
+                document.getElementById("live-nina").textContent = `$${pozoNina.toFixed(2)}`;
+
+                // Sincronizar el simulador con los montos reales si el usuario no lo está editando
+                if (!simEditadoManualmente) {
+                    document.getElementById("sim-nino").value = pozoNino;
+                    document.getElementById("sim-nina").value = pozoNina;
+                    calcularSimulador();
+                }
+
+                const hora = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                estadoEl.textContent = `Actualizado: ${hora}`;
+            } catch (error) {
+                console.error("Error sincronizando el pozo:", error);
+                estadoEl.textContent = "En espera de datos en vivo";
+            }
+        }
+
+        // =========================================================================
+        // 3. SIMULADOR DE GANANCIAS EN TIEMPO REAL
+        // =========================================================================
+        const inputNino = document.getElementById("sim-nino");
+        const inputNina = document.getElementById("sim-nina");
+        const inputApuesta = document.getElementById("sim-tu-apuesta");
+
+        function calcularSimulador() {
+            const pozoNino = Math.max(0, parseFloat(inputNino.value) || 0);
+            const pozoNina = Math.max(0, parseFloat(inputNina.value) || 0);
+            const miApuesta = Math.max(1, parseFloat(inputApuesta.value) || 0);
+
+            // Escenario si gana Niño (se suma tu apuesta al pozo de Niño)
+            const totalSiNino = pozoNino + pozoNina + miApuesta;
+            const pozoGanadoresNino = totalSiNino * 0.70;
+            const pagoNino = Math.max(miApuesta, miApuesta * (pozoGanadoresNino / (pozoNino + miApuesta)));
+
+            // Escenario si gana Niña (se suma tu apuesta al pozo de Niña)
+            const totalSiNina = pozoNino + pozoNina + miApuesta;
+            const pozoGanadoresNina = totalSiNina * 0.70;
+            const pagoNina = Math.max(miApuesta, miApuesta * (pozoGanadoresNina / (pozoNina + miApuesta)));
+
+            document.getElementById("res-nino").textContent = `$${pagoNino.toFixed(2)} USD`;
+            document.getElementById("res-nina").textContent = `$${pagoNina.toFixed(2)} USD`;
+        }
+
+        [inputNino, inputNina].forEach(el => {
+            el.addEventListener("input", () => {
+                simEditadoManualmente = true;
+                calcularSimulador();
+            });
+        });
+        inputApuesta.addEventListener("input", calcularSimulador);
+
+        // =========================================================================
+        // 4. COPIAR ENLACE AL PORTAPAPELES
+        // =========================================================================
+        function copiarEnlace() {
+            const tempInput = document.createElement("input");
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            mostrarToast("¡Enlace copiado! Pégalo en el grupo de WhatsApp 📲");
+        }
+
+        function mostrarToast(mensaje) {
+            const toast = document.getElementById("toast");
+            toast.textContent = mensaje;
+            toast.classList.remove("translate-y-24", "opacity-0");
+            setTimeout(() => {
+                toast.classList.add("translate-y-24", "opacity-0");
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
